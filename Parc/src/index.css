@@ -1,0 +1,47 @@
+/* Basic reset */
+body, html {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+/* Navbar styling */
+.navbar {
+  position: fixed;
+  top: 0;
+  
+  width: 100%;
+  background-color: #1f0585;
+  padding: 10px 0;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  z-index: 1000;
+}
+
+.navbar-menu {
+  display: flex;
+  justify-content: space-around;
+  list-style: none;
+  margin: 10;
+  padding: 0;
+  
+}
+
+.navbar-menu li {
+  position: relative;
+}
+
+.navbar-menu a {
+  color: white;
+  text-decoration: none;
+  padding: 10px 20px;
+  display: block;
+  animation: slideIn 0.5s forwards;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.navbar-menu a:hover {
+  background-color: #5f0bcd;
+  color: #fff;
+  animation: fadeEffect 0.3s forwards;
+}
