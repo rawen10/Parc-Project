@@ -1,29 +1,26 @@
-// email.service.ts
-import { Injectable } from '@nestjs/common';
-import * as nodemailer from 'nodemailer';
+// import { Injectable } from '@nestjs/common';
+// import { MailerService } from '@nestjs-modules/mailer';
 
-@Injectable()
-export class EmailService {
-  private transporter;
+// @Injectable()
+// export class MailService {
+//   constructor(private readonly mailerService: MailerService) {}
 
-  constructor() {
-    this.transporter = nodemailer.createTransport({
-      service: 'gmail', // Utilisez le service email de votre choix
-      auth: {
-        user: 'rawensoltqni@gmail.com',
-        pass: 'nchallahzina'
-      }
-    });
-  }
-
-  async sendMail(to: string, subject: string, text: string) {
-    const mailOptions = {
-      from: 'rawensoltqni@gmail.com',
-      to,
-      subject,
-      text,
-    };
-
-    return await this.transporter.sendMail(mailOptions);
-  }
-}
+//   async sendMail() {
+//     try {
+//       await this.mailerService.sendMail({
+//         to: 'opensource@is.best',
+//         from: '"Welcome to the fold" <linux@over.windows>', // sender address
+//         subject: 'Quotes', // Subject line
+//         text: '', // plaintext body
+        
+//       });
+//       return {
+//         success: true,
+//       };
+//     } catch (error) {
+//       return {
+//         success: false,
+//       };
+//     }
+//   }
+// }

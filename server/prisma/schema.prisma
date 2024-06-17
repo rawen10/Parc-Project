@@ -22,4 +22,5 @@ model Reservation {
     sexe String
     date String
     pays String
+    status String?
   }

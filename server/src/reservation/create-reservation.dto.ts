@@ -17,5 +17,7 @@ export class CreateReservationDto {
   date:string
   @ApiProperty()
   pays:string
+  @ApiProperty()
+  status?:string
 }
 

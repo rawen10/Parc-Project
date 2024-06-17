@@ -1,4 +1,4 @@
-import { Controller, Post, Body, Get } from '@nestjs/common';
+import { Controller, Post, Body, Get, Patch, Param } from '@nestjs/common';
 import { CreateReservationDto } from './create-reservation.dto';
 import { ReservationService } from './reservation.service';
 import { ApiTags } from '@nestjs/swagger';
@@ -18,5 +18,9 @@ export class ReservationController {
   findAll() {
     return this.reservationService.findAll();
   }
+  // @Patch('accept/:id')
+  // async acceptReservation(@Param('id') id: number) {
+  //   return this.reservationService.acceptReservation(Number(id));
+  // }
 }
 
